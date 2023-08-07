@@ -122,9 +122,9 @@ function startGame() {
         // mark bonus clicked as false
         clicked = false;
 
-        // set delay time of 3 sec to show bonus mouse on screen
+        // set delay time of 2 sec to show bonus mouse on screen
         setTimeout(function () {
-          // after 3 sec change mouse position and check if bonus mouse is clicked or not
+          // after 2 sec change mouse position and check if bonus mouse is clicked or not
           changePosition();
 
           if (!clicked) {
@@ -135,7 +135,7 @@ function startGame() {
 
           // call add bonus function again
           addBonus();
-        }, 3000);
+        }, 2000);
       } else {
         // if game is paused then return from bonus, it will be added again when mouse will be clciked
         bonusOn = false; //mark bonus on as false
@@ -166,12 +166,15 @@ function startGame() {
 
   // function when user clicks on mouse
   mouse.addEventListener("click", function () {
+    // pause Ouch music
+    pauseMusic("ouchSound");
+
     // Mark ispause as false as game is in play mode
     ispause = false;
 
     // add bonus on play if its not on
     if (!bonusOn) {
-      console.log("bonus is not on, making it on");
+      // console.log("bonus is not on, making it on");
       bonusOn = true;
       addBonus();
     }
@@ -255,10 +258,10 @@ function startGame() {
     levelUpgrade(score);
 
     // set countdown time, decrese 2 sec on each mouse hunt
-    var countdown = 10 - 2 * dec++;
+    var countdown = 15 - 2 * dec++;
     // set minimum time to hunt mouse
-    if (countdown <= 5) {
-      countdown = 5;
+    if (countdown <= 2) {
+      countdown = 2;
     }
     var seconds = countdown;
 
