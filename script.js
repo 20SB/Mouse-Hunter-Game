@@ -533,3 +533,20 @@ document
     }
   }
 }
+
+// set body height and width
+function setBodyDimensions() {
+  // Find viewport height and width
+  let viewport_width = window.innerWidth;
+  let viewport_height = window.innerHeight;
+
+  // Set body width and height to viewport dimensions
+  document.body.style.width = viewport_width + "px";
+  document.body.style.height = viewport_height + "px";
+}
+
+// Call the function initially and whenever the window is resized
+setBodyDimensions();
+
+// Attach the function to the 'resize' event
+window.addEventListener("resize", setBodyDimensions);

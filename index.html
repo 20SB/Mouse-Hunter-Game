@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,21 +39,19 @@
         <!-- Rules -->
         <div class="rules">
           <h4 style="margin-bottom: 0">Rules:</h4>
-          <ul style="margin-top: 0">
-            <li>Click on mouse to catch</li>
-            <li>Catching each mouse adds point 1 to your score</li>
+          <ul id="rulesList">
+            <li>Click on mouse to hunt the mice.</li>
+            <li>Each successful catch earns you 1 point.</li>
             <li>
-              Time to catch each mouse decreses by 2 sec on every successful
-              catch
+              The time to catch each mouse decreases by 2 seconds after every successful catch.
             </li>
             <li>
-              If you are unable to catch the mouse in desired time then your chances to
-              play reduces by 1
+              If you fail to catch the mouse within the allotted time, you lose 1 chance to play.
             </li>
-            <li>Initailly you are provided with 3 chances only</li>
-            <li>❤️ - Represents your chances to play after discontinuity</li>
-            <li>Scores represent no of mouse you caught successfully</li>
-            <li>Increase in Level reduces time to catch the mouse</li>
+            <li>You start with 3 chances. ❤️ icons represent your chances to play after losing a chance.</li>
+            <li>Catching a big mouse rewards you with 5 additional points.</li>
+            <li>As the game level increases, the time to catch the mouse decreases further.</li>
+            <li>Once the game is paused, you can resume it within 30 seconds only.</li>
           </ul>
         </div>
 
@@ -84,8 +83,11 @@
         <p>Max Score: <span id="maxScore"></span></p>
 
         <!-- Extra buttons -->
-        <button id="rankListBtn"><b></b>Rank List</button>
+        <div class="endMsgBtn">
+          <button id="rankListBtn"><b></b>Rank List</button>
         <button id="playAgain">Play Again</button>
+        </div>
+        
       </div>
     </div>
 
@@ -106,7 +108,7 @@
           <div class="lh1">RANK</div>
           <div class="lh2">NAME</div>
           <div class="lh3">SCORE</div>
-          <div class="lh4" style="width: 120px">TIME</div>
+          <div class="lh4" style="width: 31%">TIME</div>
         </div>
 
         <!-- Rank List -->
