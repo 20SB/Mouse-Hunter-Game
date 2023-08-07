@@ -1,0 +1,366 @@
+body {
+  margin: 0px;
+  background: url(assets/back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+/* Start Msg */
+.start-details {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.start-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+#nameForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* End Msg */
+.end-details {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.end-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+.end-details h2 {
+  text-align: center;
+  color: red;
+  font-weight: 800;
+}
+
+/* Rank List */
+.rank-details {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.closeBtn {
+  background-color: #e9e9e9;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.closeBtn:hover {
+  background-color: #a6a6a6;
+  cursor: pointer;
+}
+.rank-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+.rank-details h2 {
+  text-align: center;
+  color: rgb(1, 46, 101);
+  font-weight: 800;
+}
+#rankList {
+  max-height: 50vh;
+  overflow-y: scroll;
+  padding-left: 0;
+}
+#rankList::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+#rankList::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+#rankList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: -webkit-gradient(
+    linear,
+    40% 0%,
+    75% 84%,
+    from(#4d9c41),
+    to(#19911d),
+    color-stop(0.6, #54de5d)
+  );
+}
+#rankList li {
+  display: flex;
+}
+#rankList li div {
+  margin: 2px 10px;
+}
+.listHead {
+  color: #0f00d1;
+  display: flex;
+  width: 92%;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.pRank {
+  width: 50px;
+}
+.scr {
+  width: 50px;
+}
+.pName {
+  width: 100px;
+}
+
+/* Game Area */
+.gameArea {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Mouse Box */
+.marker {
+  position: absolute;
+  filter: drop-shadow(0px 0px 16px white);
+}
+#markerLogo {
+  height: 200px;
+}
+.mouse {
+  position: absolute;
+  top: 13px;
+  left: 65px;
+  background: azure;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mouse img {
+  height: 70px;
+  width: 70px;
+}
+#box {
+  position: absolute;
+  height: 220px;
+  width: 120px;
+  font-size: 2vh;
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: top 0s ease, opacity 0.5s ease;
+  top: 65px;
+  left: 10px;
+}
+#box img {
+  user-select: none;
+}
+
+/* Bonus Mouse Box */
+#bonusMarkerLogo {
+  height: 200px;
+}
+#bonus-mouse-box {
+  position: absolute;
+  top: 28px;
+  left: 65px;
+  background: azure;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#bonus-mouse-box img {
+  height: 70px;
+  width: 70px;
+  
+}
+.bonus-marker {
+  position: absolute;
+  filter: drop-shadow(0px 0px 16px black);
+}
+#bonus-box {
+  position: absolute;
+  height: 220px;
+  width: 120px;
+  font-size: 2vh;
+  padding: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: top 0s ease, opacity 0.5s ease;
+  top: 65px;
+  left: 10px;
+  animation: slideUpAndFadeIn 1s ease forwards;
+}
+#bonus-box img {
+  user-select: none;
+}
+#heading-sec {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Page Heading */
+#leftContent{
+  display: flex;
+}
+#logo {
+  height: 45px;
+  margin: 10px;
+  border-radius: 5px 0px 0px 5px;
+  margin-right: 0;
+}
+#player{
+  display: flex;
+    background: white;
+    padding: 10px;
+    width: auto;
+    border-radius: 0px 5px 5px 0px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    height: 25px;
+    margin-left: 0;
+    color: red;
+    font-family: cursive;
+    padding-left: 0;
+}
+
+/* Player info */
+.info {
+  display: flex;
+  padding: 20px;
+  padding-top: 0;
+  flex-direction: row-reverse;
+}
+#life {
+  display: flex;
+  background: white;
+  padding: 10px 30px;
+  width: auto;
+  border-radius: 5px;
+  color: red;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+#score {
+  display: flex;
+  background: white;
+  padding: 10px 30px;
+  width: auto;
+  border-radius: 5px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+#level {
+  display: flex;
+  background: white;
+  padding: 10px 30px;
+  width: auto;
+  border-radius: 5px;
+  margin: 10px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+#level img {
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Count Down */
+#countdown {
+  position: absolute;
+  height: 95vh;
+  width: 96vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  opacity: 0.8;
+  color: white;
+  z-index: -1;
+  user-select: none;
+}
+
+/* Break in loosing msg */
+#breakInfo {
+  position: absolute;
+  height: 95vh;
+  width: 96vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  opacity: 0.8;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+  z-index: -1;
+  text-align: center;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Display None Class */
+.disp-none {
+  display: none;
+}
+
+/* Blurred and Non Selectable Class */
+.blurred-and-non-selectable {
+  filter: blur(5px); /* Apply the blur effect */
+  user-select: none; /* Prevent user selection */
+}
+
+/* Slide up and Fade in Class */
+.slide-up-fade-in {
+  opacity: 0;
+  animation: slideUpAndFadeIn 1s ease forwards;
+}
+
+/* Animation keyframes */
+@keyframes slideUpAndFadeIn {
+  0% {
+    /* top: 50px; */
+    opacity: 0;
+  }
+  100% {
+    /* top: 0; */
+    opacity: 1;
+  }
+}
