@@ -30,7 +30,7 @@ body {
 }
 #rulesList {
   margin-top: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 30vh;
 }
 #rulesList::-webkit-scrollbar-track {
